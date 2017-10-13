@@ -15,7 +15,10 @@ cp ../eRS232/TVoff.py ../TVoff.py
 echo "Dosyalar kopyalandi..."
 echo "crontab ekleniyor..."
 sudo touch /var/spool/cron/crontabs/pi
-sudo sh -c "echo '# m h  dom mon dow   command' >> /var/spool/cron/crontabs/pi"
-sudo sh -c "echo '@reboot python /home/pi/TVon.py' >> /var/spool/cron/crontabs/pi"
-sudo sh -c "echo '00 04 * * * sudo reboot' >> /var/spool/cron/crontabs/pi"
+crontab -l > mycron
+echo "# m h  dom mon dow   command" >> mycron
+echo "@reboot python /home/pi/TVon.py" >> mycron
+echo "00 04 * * * sudo reboot" >> mycron
+crontab mycron
+rm mycron
 sudo reboot
