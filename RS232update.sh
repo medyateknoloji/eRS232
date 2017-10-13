@@ -14,7 +14,6 @@ cp ../eRS232/TVon.py ../TVon.py
 cp ../eRS232/TVoff.py ../TVoff.py
 echo "Dosyalar kopyalandi..."
 echo "crontab ekleniyor..."
-sudo touch /var/spool/cron/crontabs/pi
 touch mycron
 echo "# m h  dom mon dow   command" >> mycron
 echo "@reboot python /home/pi/TVon.py" >> mycron
