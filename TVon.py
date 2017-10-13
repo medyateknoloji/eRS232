@@ -35,5 +35,3 @@ for number in range(7):
   	   ser.write(input.decode("hex"))
 	   break
    print "Hata"
-   if number > 6:
-	os.system('sudo reboot')
