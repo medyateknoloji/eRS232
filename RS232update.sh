@@ -10,8 +10,8 @@ sudo sh -c "echo 'enable_uart=1' >> /boot/config.txt"
 echo "config.txt duzenlendi"
 echo "pyserial kutuphanesi kuruluyor..."
 sudo python -m pip install pyserial
-cp ../eRS232/TVon.py ../TVon.py
-cp ../eRS232/TVoff.py ../TVoff.py
+cp ../piSignagePro/eRS232/TVon.py ../TVon.py
+cp ../piSignagePro/eRS232/TVoff.py ../TVoff.py
 echo "Dosyalar kopyalandi..."
 echo "crontab ekleniyor..."
 touch mycron
